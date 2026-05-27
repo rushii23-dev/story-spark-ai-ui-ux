@@ -72,7 +72,7 @@ const NavListComponent: React.FC = () => {
           <Link to="/">
             <img src={logo} alt="logo" className="h-10 w-auto object-contain" />
           </Link>
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <NavLink to="/" end className={({ isActive }) => getLinkClass(isActive)}>
               {({ isActive }) => (
                 <>
@@ -153,7 +153,7 @@ const NavListComponent: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <button
               type="button"
               aria-label="Open Help Center"
@@ -201,7 +201,7 @@ const NavListComponent: React.FC = () => {
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="md:hidden text-gray-400 hover:text-gray-300 p-2"
+            className="lg:hidden text-gray-400 hover:text-gray-300 p-2"
             onClick={() => setMenuOpen((prev) => !prev)}>
             <i className={`fas ${menuOpen ? "fa-xmark" : "fa-bars"} text-xl`} />
           </button>
@@ -217,7 +217,7 @@ const NavListComponent: React.FC = () => {
       />
 
       {menuOpen && (
-        <div className="md:hidden px-5 pb-4 flex flex-col gap-3 border-t border-white/10 mt-2">
+        <div className="lg:hidden px-5 pb-4 flex flex-col gap-3 border-t border-white/10 mt-2">
           <NavLink to="/" end className={({ isActive }) => getMobileLinkClass(isActive)}>
             {({ isActive }) => (
               <>
